@@ -1,31 +1,68 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<title>Syso</title>
+	<title>Syso-recruit</title>
 	<script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="static/js/vector.js"></script>
+	<script>
+		$(function() {
+			// 初始化 传入dom id
+			var victor = new Victor("container", "output");
+			var theme = [
+				["#002c4a", "#005584"],
+				["#35ac03", "#3f4303"],
+				["#ac0908", "#cd5726"],
+				["#18bbff", "#00486b"]
+			]
+			$(".color li").each(function(index, val) {
+				var color = theme[index];
+				$(this).mouseover(function() {
+					victor(color).set();
+				})
+			});
+		});
+	</script>
 	<link rel="stylesheet" href="static/css/semantic-2.1.7.css">
-    <link rel="stylesheet" href="static/css/structure.css">
+	<link rel="stylesheet" href="static/css/structure.css">
+	<style>
+		#container {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+
+		#output {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
+
 <body>
-<div class="ui vertical masthead center aligned random segment">
-	<div id="ui container">
-		<h1 class="fender"><img src='static/img/syso_terminal.jpg'><br></h1>
-		<ul class="ui buttons">
-			<div id="button">
-				<input type="button" id="apply" class="button" value="가입 신청하기" onclick="alert('아직 준비 안됐다 이놈아')">
-			</div>
-			<div>
-				<input type="button" id="more" class="button" value="더 알아보기" onclick="alert('더알아볼것도없다 그냥 신청해랏')">
-			</div>
-		</ul>
+	<div id="container">
+		<div id="output"></div>
 	</div>
-</div>
+	<div class="ui vertical masthead center aligned random segment">
+		<div id="ui container">
+			<h1 class="fender"><img src='static/img/syso_terminal.jpg'><br></h1>
+			<ul class="ui buttons">
+				<div id="button">
+					<input type="button" id="apply" class="button" value="가입 신청하기" onclick="alert('아직 준비 안됐다 이놈아')">
+				</div>
+				<div>
+					<input type="button" id="more" class="button" value="더 알아보기" onclick="alert('더알아볼것도없다 그냥 신청해랏')">
+				</div>
+			</ul>
+		</div>
+	</div>
 
 
 
-<div class="ui footer">
+	<div class="ui footer">
 
-</div>
+	</div>
 </body>
+
 </html>
