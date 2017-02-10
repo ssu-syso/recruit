@@ -62,3 +62,13 @@
 	display: inline-block;
 	outline: none;
 }
+
+.fender {
+	width: auto;
+	height: auto;
+}
+
+.fender img {
+	max-width: 50%;
+	height: auto;
+}
