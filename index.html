@@ -6,14 +6,16 @@
 	<title>Syso-recruit</title>
 	<script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="static/js/vector.js"></script>
+	<script type="text/javascript" src="static/js/typed.js"></script>
 	<script>
+		// for vector background
 		$(function() {
 			// 初始化 传入dom id
 			var victor = new Victor("container", "output");
 			var theme = [
-//				["#002c4a", "#005584"],
-//				["#35ac03", "#3f4303"],
-//				["#ac0908", "#cd5726"],
+				["#002c4a", "#005584"],
+				["#35ac03", "#3f4303"],
+				["#ac0908", "#cd5726"],
 				["#18bbff", "#00486b"]
 			]
 			$(".color li").each(function(index, val) {
@@ -23,6 +25,33 @@
 				})
 			});
 		});
+	</script>
+	<script>
+		// for typing animation
+        $(function(){
+
+            $("#typed").typed({
+                // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                stringsElement: $('#typed-strings'),
+                typeSpeed: 30,
+                backDelay: 500,
+                loop: true,
+                contentType: 'html', // or text
+                // defaults to false for infinite loop
+                loopCount: false,
+                callback: function(){ foo(); },
+                resetCallback: function() { newTyped(); }
+            });
+
+            $(".reset").click(function(){
+                $("#typed").typed('reset');
+            });
+
+        });
+
+        function newTyped(){ /* A new typed object */ }
+
+        function foo(){ console.log("Callback"); }
 	</script>
 	<link rel="stylesheet" href="static/css/semantic-2.1.7.css">
 	<link rel="stylesheet" href="static/css/structure.css">
@@ -38,6 +67,43 @@
 			height: 100%;
 		}
 	</style>
+	<style>
+		/* code for animated blinking cursor */
+		.typed-cursor{
+			opacity: 1;
+			font-weight: 100;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			-ms-animation: blink 0.7s infinite;
+			-o-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+		.typed-cursor{
+			opacity: 1;
+			-webkit-animation: blink 0.7s infinite;
+			-moz-animation: blink 0.7s infinite;
+			animation: blink 0.7s infinite;
+		}
+		@keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+			0% { opacity:1; }
+			50% { opacity:0; }
+			100% { opacity:1; }
+		}
+
+		.ui .type-wrap{
+			font-size: 2em;
+		}
+	</style>
 </head>
 
 <body>
@@ -46,6 +112,18 @@
 	</div>
 	<div class="ui vertical masthead center aligned random segment">
 		<div id="ui container">
+			<div class="wrap">
+				<h1 class="h1" style="font-size:4em">Systems Software Recruit</h1>
+
+				<div class="ui type-wrap">
+					<div id="typed-strings">
+						<span>최고의 사람들이 모인 소모임 <strong>시소</strong></span>
+						<p>이제 <strong>당신만</strong>  함께하면 됩니다.</p>
+						<p>Eat, Sleep, Code -linus torvalds-</p>
+					</div>
+					<span id="typed" style="white-space:pre;"></span>
+				</div>
+			</div>
 			<h1 class="fender"><img src='static/img/syso_terminal.png'><br></h1>
 			<ul class="ui buttons">
 				<div id="button">
