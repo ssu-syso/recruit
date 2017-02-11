@@ -1,3 +1,11 @@
+.ui .main{
+    color: #000000;
+    font-family: "Helvetica-Light", "sans-serif";
+    font-size: 2em;
+    padding-top: 2em;
+    /*margin-top: 1em;*/
+    padding-bottom: 1.5em;
+}
 
 /* text editor styles */
 .text-editor-wrap {
@@ -5,7 +13,7 @@
     margin: auto;
     max-width: 530px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 70px;
     clear: both;
     overflow: hidden;
     -webkit-transition: all 0.5s ease-out;
@@ -31,10 +39,10 @@
 
 .text-body {
     height: 250px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 10px;
-    color: #f0f0f0;
-    text-shadow: #000 0px 1px 0px;
+    color: #000000;
+    /*text-shadow: #000 0px 1px 0px;*/
     font-family: "Consolas", "Courier New", "Courier";
     font-size: 1.75em;
     line-height: 1.40em;

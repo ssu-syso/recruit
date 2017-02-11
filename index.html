@@ -30,17 +30,21 @@
 		// for typing animation
         $(function(){
 
-            $("#typed").typed({
+            $("#top-typing").typed({
                 // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-                stringsElement: $('#typed-strings'),
+                strings: [
+                    "최고의 사람들이 모인 소모임 <strong>시소</strong>",
+					"이제 <strong>당신만</strong>  함께하면 됩니다.",
+					"지금 <strong>가입</strong>신청하세요."
+				],
                 typeSpeed: 30,
                 backDelay: 500,
                 loop: true,
                 contentType: 'html', // or text
                 // defaults to false for infinite loop
                 loopCount: false,
-                callback: function(){ foo(); },
-                resetCallback: function() { newTyped(); }
+//                callback: function(){ second(); },
+//                resetCallback: function() { newTyped(); }
             });
 
             $(".reset").click(function(){
@@ -51,7 +55,16 @@
 
         function newTyped(){ /* A new typed object */ }
 
-        function foo(){ console.log("Callback"); }
+        $(function(){
+            $("#typed").typed({
+                strings: ["문과, 전과생, 휴학생 가능 </br>"],
+                typeSpeed: 100,
+                backDelay: 500,
+                loop: true,
+				contentType: 'html'
+            })
+        });
+
 	</script>
 	<link rel="stylesheet" href="static/css/semantic-2.1.7.css">
 	<link rel="stylesheet" href="static/css/structure.css">
@@ -112,20 +125,23 @@
 	<div class="ui vertical masthead center aligned random segment">
 		<div id="ui container">
 			<!--<h1 class="h1" style="font-size:4em">Systems Software Recruit</h1>-->
+			<div class="ui main">
+				<span id="top-typing"></span>
+			</div>
 			<div class="text-editor-wrap">
 				<div class="title-bar">
-					<span class="title">
-						"Systems Software Recruit "
+					<span class="title-text">
+						Systems Software Recruit
 						<span class="terminal-height">80x26</span>
 					</span>
 				</div>
 				<div class="text-body">
 					$
-					<div id="typed-strings">
-						<span>최고의 사람들이 모인 소모임 <strong>시소</strong></span>
-						<p>이제 <strong>당신만</strong>  함께하면 됩니다.</p>
-						<p>지금 가입신청하세요.</p>
-					</div>
+					<!--<div id="typed-strings">-->
+						<!--<span>최고의 사람들이 모인 소모임 <strong>시소</strong></span>-->
+						<!--<p>이제 <strong>당신만</strong>  함께하면 됩니다.</p>-->
+						<!--<p>지금 가입신청하세요.</p>-->
+					<!--</div>-->
 					<span id="typed"></span>
 				</div>
 			</div>
