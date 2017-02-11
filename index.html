@@ -100,10 +100,9 @@
 			100% { opacity:1; }
 		}
 
-		.ui .type-wrap{
-			font-size: 2em;
-		}
 	</style>
+	<link rel="stylesheet" href="static/css/console.css">
+
 </head>
 
 <body>
@@ -112,19 +111,25 @@
 	</div>
 	<div class="ui vertical masthead center aligned random segment">
 		<div id="ui container">
-			<div class="wrap">
-				<h1 class="h1" style="font-size:4em">Systems Software Recruit</h1>
-
-				<div class="ui type-wrap">
+			<!--<h1 class="h1" style="font-size:4em">Systems Software Recruit</h1>-->
+			<div class="text-editor-wrap">
+				<div class="title-bar">
+					<span class="title">
+						"Systems Software Recruit "
+						<span class="terminal-height">80x26</span>
+					</span>
+				</div>
+				<div class="text-body">
+					$
 					<div id="typed-strings">
 						<span>최고의 사람들이 모인 소모임 <strong>시소</strong></span>
 						<p>이제 <strong>당신만</strong>  함께하면 됩니다.</p>
-						<p>Eat, Sleep, Code -linus torvalds-</p>
+						<p>지금 가입신청하세요.</p>
 					</div>
-					<span id="typed" style="white-space:pre;"></span>
+					<span id="typed"></span>
 				</div>
 			</div>
-			<h1 class="fender"><img src='static/img/syso_terminal.png'><br></h1>
+			<!--<h1 class="fender"><img src='static/img/syso_terminal.png'><br></h1>-->
 			<ul class="ui buttons">
 				<div id="button">
 					<input type="button" id="apply" class="button" value="가입 신청하기" onclick="alert('아직 준비 안됐다 이놈아')">
