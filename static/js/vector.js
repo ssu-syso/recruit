@@ -38,7 +38,7 @@ function Victor(container, anitOut){
 			zRange: 1,
 			ambient: "#525252",
 			diffuse: "#D5C7C4",
-			speed: 0.002
+			speed: 0.0015
 		};
 		var G = {
 			count: 2,
