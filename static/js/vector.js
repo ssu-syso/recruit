@@ -31,21 +31,21 @@ function Victor(container, anitOut){
 			width: 1.5,
 			height: 1.5,
 			depth: 10,
-			segments: 12,
-			slices: 6,
+			segments: 15,
+			slices: 10,
 			xRange: 0.8,
 			yRange: 0.1,
 			zRange: 1,
 			ambient: "#525252",
-			diffuse: "#FFFFFF",
-			speed: 0.0002
+			diffuse: "#D5C7C4",
+			speed: 0.002
 		};
 		var G = {
 			count: 2,
 			xyScalar: 1,
 			zOffset: 100,
-			ambient: "#002c4a",
-			diffuse: "#005584",
+			ambient: "#52C76F",
+			diffuse: "#D5C7C4",
 			speed: 0.001,
 			gravity: 1200,
 			dampening: 0.95,
